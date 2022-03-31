@@ -1,6 +1,6 @@
 ﻿using BridgeDesignPattern.ReportFormats;
 using BridgeDesignPattern.Reports;
 
-Report report = new SalesReport(new DesktopReport());
+Report report = new VisitReport(new MobileReport());
 
 report.Display();
