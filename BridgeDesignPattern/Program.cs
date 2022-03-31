@@ -1,5 +1,6 @@
-﻿using BridgeDesignPattern.Reports;
+﻿using BridgeDesignPattern.ReportFormats;
+using BridgeDesignPattern.Reports;
 
-Report report = new DesktopSalesReport();
+Report report = new SalesReport(new DesktopReport());
 
 report.Display();

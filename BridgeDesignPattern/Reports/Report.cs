@@ -1,7 +1,19 @@
-﻿namespace BridgeDesignPattern.Reports
+﻿using BridgeDesignPattern.ReportFormats;
+
+namespace BridgeDesignPattern.Reports
 {
     public abstract class Report
     {
-        public abstract void Display();
+        private readonly IReportFormat reportFormat;
+
+        protected Report(IReportFormat ReportFormat)
+        {
+            reportFormat = ReportFormat;
+        }
+        
+        public virtual void Display()
+        {
+            reportFormat.Generate();
+        }
     }
 }
